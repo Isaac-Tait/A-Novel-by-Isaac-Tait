@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+
 import IdentityModal, { useIdentityContext } from "react-netlify-identity-widget"
 
 const Layout = ({ location, title, children }) => {
@@ -29,8 +30,7 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div class="text-lg" data-is-root-path={isRootPath}>
-      <header class="font-semibold text-2xl flex align-content-center">{header}</header>
-        
+      <header class="font-semibold text-2xl bg-gray-500 pl-2">{header}</header>
         <nav class="text-red-500">
           {" "}
           Login Status:
@@ -43,7 +43,7 @@ const Layout = ({ location, title, children }) => {
       
       <IdentityModal showDialog={dialog} onCloseDialog={() => setDialog(false)} />
       
-      <footer class="mt-2 ml-2 flex flex-row">
+      <footer class="mt-2 pl-2 flex flex-row bg-gray-300">
         © {new Date().getFullYear()}, Built with&nbsp;
         {` `}
         <a href="https://www.gatsbyjs.com" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:bg-red-500 hover:text-white">Gatsby&nbsp;</a>
