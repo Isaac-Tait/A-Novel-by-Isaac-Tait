@@ -1,6 +1,6 @@
 ---
 title: Introductions...
-date: "2035-05-12T22:12:03.284Z"
+date: "2035-05-12"
 description: "Going way back, way back..."
 ---
 

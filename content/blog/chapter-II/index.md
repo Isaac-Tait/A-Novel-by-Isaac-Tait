@@ -1,6 +1,6 @@
 ---
 title: The Beginnings of a dreamer
-date: "1987-01-01T23:46:37.121Z"
+date: "1987-01-01"
 description: Andor discovers something magical...
 ---
 

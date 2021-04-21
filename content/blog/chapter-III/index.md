@@ -1,6 +1,6 @@
 ---
 title: A most unexpected day
-date: "2025-12-05T22:40:32.169Z"
+date: "2025-12-05"
 description: Lilli meets an intriguing stranger...
 ---
 
