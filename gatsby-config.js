@@ -1,19 +1,25 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `The Birds`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Isaac Tait`,
+      summary: `who lives in North County San Diego and does not have enough time in the day to bring all his ideas out of his head...`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `An open source novel. Read it and if you want to contribute let me know...`,
+    siteUrl: `https://focused-brown-d1eca9.netlify.app`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `Isaac_Tait_83`,
     },
   },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-postcss`,
+    {
+      resolve:`gatsby-plugin-netlify-identity`,
+      options: {
+        url:`https://focused-brown-d1eca9.netlify.app`,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
