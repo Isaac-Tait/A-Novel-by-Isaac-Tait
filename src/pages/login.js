@@ -17,14 +17,19 @@ const Login = () => {
         <div class="text-lg">
             <Seo />
             <Header />
+
             <nav class="text-red-500">
                 {" "}
                 Login Status:
-                <button className="btn" onClick={() => setDialog(true)}>
+                <button class="bg-gray-500" onClick={() => setDialog(true)}>
                     {isLoggedIn ? `Hello ${name}, Log out here!` : "LOG IN"}
                 </button>
             </nav>
-            <IdentityModal showDialog={dialog} onCloseDialog={() => setDialog(false)} />
+
+            <div class="bg-gray-800">
+                <IdentityModal showDialog={dialog} onCloseDialog={() => setDialog(false)} />
+            </div>
+            
             <Bio />
         </div>
     )

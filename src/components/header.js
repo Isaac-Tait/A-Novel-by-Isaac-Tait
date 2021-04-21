@@ -1,11 +1,11 @@
 import React from "react"
-
-import Logo from "../images/bare-tree.svg"
+import { Link } from "gatsby"
 
 const Header = () => {
     return (
         <div>
-            <Logo />
+            <Link />
+            <p>The Birds</p>
         </div>
     )
 };
