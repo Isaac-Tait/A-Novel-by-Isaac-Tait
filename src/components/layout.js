@@ -43,12 +43,14 @@ const Layout = ({ location, title, children }) => {
       
       <IdentityModal showDialog={dialog} onCloseDialog={() => setDialog(false)} />
       
-      <footer class="mt-2 pl-2 flex flex-row bg-gray-300">
-        © {new Date().getFullYear()}, Built with&nbsp;
-        {` `}
-        <a href="https://www.gatsbyjs.com" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:bg-red-500 hover:text-white">Gatsby&nbsp;</a>
-        <p>and <a href="https://www.tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:bg-red-500 hover:text-white">TailwindCSS</a></p>
-        <p>&nbsp;Another <a href="https://mountaintopcoding.com" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:bg-red-500 hover:text-white">mountainTopCoding(<span role="img" aria-label="mountain with snow-cap">&#127956;</span>);</a> project.</p>
+      <footer class="mt-2 pl-2 flex flex-row bg-gray-300 justify-between">
+        <div>
+          © {new Date().getFullYear()}, Built with&nbsp;
+          {` `}
+          <a href="https://www.gatsbyjs.com" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:bg-red-500 hover:text-white">Gatsby&nbsp;</a>
+          <span>and <a href="https://www.tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:bg-red-500 hover:text-white">TailwindCSS</a></span>
+        </div>
+        <p class="mr-2">&nbsp;Another <a href="https://mountaintopcoding.com" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:bg-red-500 hover:text-white">mountainTopCoding(<span role="img" aria-label="mountain with snow-cap">&#127956;</span>);</a> project.</p>
       </footer>
     </div>
   )
