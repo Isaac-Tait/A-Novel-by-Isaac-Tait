@@ -16,13 +16,13 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
+      <p class="font-semibold text-2xl bg-gray-500 w-2/3 justify-center mx-auto">
         <Link to="/">{title}</Link>
-      </h1>
+      </p>
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
+      <Link class="font-semibold text-2xl bg-gray-500 w-2/3 justify-center mx-auto" to="/">
         {title}
       </Link>
     )
@@ -30,14 +30,15 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div class="text-lg" data-is-root-path={isRootPath}>
-      <header class="font-semibold text-2xl bg-gray-500 pl-2">{header}</header>
-        <nav class="text-red-500">
-          {" "}
-          Login Status:
-          <button className="btn" onClick={() => setDialog(true)}>
-            {isLoggedIn ? `Hello ${name}, Log out here!` : "LOG IN"}
-          </button>
-        </nav>
+      <header>{header}</header>
+
+      <nav class="text-red-500">
+        {" "}
+        Login Status:
+        <button className="btn" onClick={() => setDialog(true)}>
+          {isLoggedIn ? `Hello ${name}, Log out here!` : "LOG IN"}
+        </button>
+      </nav>
 
       <main>{children}</main>
       
@@ -45,7 +46,7 @@ const Layout = ({ location, title, children }) => {
       
       <footer class="mt-2 pl-2 flex flex-row bg-gray-300 justify-between">
         <div>
-          © {new Date().getFullYear()}, Built with&nbsp;
+          © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:bg-red-500 hover:text-white">Gatsby&nbsp;</a>
           <span>and <a href="https://www.tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:bg-red-500 hover:text-white">TailwindCSS</a></span>

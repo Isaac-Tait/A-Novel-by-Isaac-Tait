@@ -2,7 +2,6 @@ import * as React from "react"
 
 import Bio from "../components/bio"
 import Seo from "../components/seo"
-import Header from "../components/header"
 
 import IdentityModal, { useIdentityContext } from "react-netlify-identity-widget"
 
@@ -16,7 +15,6 @@ const Login = () => {
     return (
         <div class="text-lg">
             <Seo />
-            <Header />
 
             <nav class="text-red-500">
                 {" "}
