@@ -1,10 +1,15 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import netlifyIdentity from "netlify-identity-widget"
 
 import Birds from "../images/bare-tree.svg"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+
+window.netlifyIdentity = netlifyIdentity;
+
+netlifyIdentity.init({});
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -61,6 +66,11 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      
+      <div>
+        <div data-netlify-identity-menu></div>
+        <div data-netlify-identity-button>Login/Register</div>
+      </div>
 
       <hr />
 

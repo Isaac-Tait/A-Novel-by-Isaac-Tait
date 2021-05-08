@@ -1,18 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import IdentityModal, { useIdentityContext } from "react-netlify-identity-widget"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
-
-  const identity = useIdentityContext()
-  const [dialog, setDialog] = React.useState(false)
-  const name =
-    (identity && identity.user && identity.user.user_metadata && identity.user.user_metadata.name) || "NoName"
-  const isLoggedIn = identity && identity.isLoggedIn
 
   if (isRootPath) {
     header = (
@@ -32,17 +25,7 @@ const Layout = ({ location, title, children }) => {
     <div class="text-lg" data-is-root-path={isRootPath}>
       <header>{header}</header>
 
-      <nav class="text-red-500">
-        {" "}
-        Login Status:
-        <button className="btn" onClick={() => setDialog(true)}>
-          {isLoggedIn ? `Hello ${name}, Log out here!` : "LOG IN"}
-        </button>
-      </nav>
-
       <main>{children}</main>
-      
-      <IdentityModal showDialog={dialog} onCloseDialog={() => setDialog(false)} />
       
       <footer class="mt-2 pl-2 flex flex-row bg-gray-300 justify-between">
         <div>
